@@ -95,6 +95,10 @@ Now it's time for you to practice!
 > You can open any HTML file in Chrome under the menu `File > Open File`:
 >
 > [![](http://cd.sseu.re/20170208-5g4jj.png)](http://cd.sseu.re/20170208-5g4jj.png)
+>
+> ### Not that much into hearts?
+>
+> Check out [this list](https://www.w3schools.com/charsets/ref_utf_symbols.asp) for the HTML code related to the most used symbols and pick the one you like most for the footer!
 
 
 
