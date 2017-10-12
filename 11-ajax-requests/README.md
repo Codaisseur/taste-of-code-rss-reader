@@ -1,12 +1,17 @@
-# Ajax Requests
+# AJAX Requests
 
-### 🌟 jQuery provides an easy way to handle Ajax requests, involving two different steps: **making a request and handling the response**.
+### 🌟 jQuery provides an easy way to handle AJAX requests.
 
-You are making a **request** any time that you visit one of the endpoints of one of your news sites. You can think of the response as the data that comes back to you after doing that.
+Doing an AJAX request involves two different steps:
+1. making a request
+2. handling the response
+
+You are making a **request** every time you visit one of the endpoints of one of your news sites. The response is the data that comes back to you as an answer to your request.
 
 ### 🌟 Data comes in different flavors, and one of them is `JSON`.
 
-At this moment, JSON is one of the most used formats out there to share data across the internet. jQuery has a method called `$.getJSON()` that helps you get any JSON from any URL that you want.
+At this moment, JSON is one of the most used formats to share data across the internet.
+jQuery has a method called `getJSON` that helps you get any JSON from any URL that you want.
 
 ### 🌟 `$.getJSON()` makes a request to a specific URL and lets you do something with the data sent back in the response.
 
@@ -17,13 +22,9 @@ $.getJSON(url, function(response) {
   // Do something with the response
 })
 ```
-
-* `url`. It specifies where the data is fetched from.
-* `function(response) { ... }`. You can place any code you want inside the `{ }` to tell your program what to do with the data that gets returned.
-
-
-
-
+Things to note:
+* `url` specifies where the data is fetched from.
+* `function(response) { ... }` is the part where you can handle the response. More specificaly, within the curly braces (`{ }`) you tell your program what to do with the data of that response.
 
 ## ✏️ Exercise
 
@@ -33,24 +34,18 @@ $.getJSON(url, function(response) {
 >
 > [![](http://cd.sseu.re/20170208-6q1sj.png)](http://cd.sseu.re/20170208-6q1sj.png)
 >
-> #### 💣 Hint
+> #### 💣 Hint (Spoiler alert)
 >
 > This is how the code would look like for the case of NOS:
 >
 > ```javascript
 > var nosUrl = "http://feeds.nos.nl/nosjournaal"
 >
-> var feedsLibrary = {
->   nos: nosUrl,
-> }
->
 > // Base query string variables
->
 > var baseUrl = "http://query.yahooapis.com/v1/public/yql?q="
 > var format = "&format=json"
 >
 > // NOS
->
 > var nosList = $('#nos')
 > var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5")
 > var rssFeedPath = baseUrl.concat(queryString, format)
@@ -60,6 +55,8 @@ $.getJSON(url, function(response) {
 > $.getJSON(rssFeedPath, function(response) {
 >   console.log(response.query.results.item)
 > })
+>
+> // Below, you do somewhat the same for your other RSS feeds.
 > ```
 
 ## 💡 Tips & Tricks
@@ -73,7 +70,6 @@ $.getJSON(url, function(response) {
 > ```
 >
 > [![](http://cd.sseu.re/20170209-nb7mc.png)](http://cd.sseu.re/20170209-nb7mc.png)
-
 
 ## 🎩 Only for Coaches
 

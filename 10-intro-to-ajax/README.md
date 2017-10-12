@@ -1,18 +1,14 @@
-# Introduction to Ajax
+# Introduction to AJAX
 
-### 🌟 The browser requests information from a web server using Ajax**. It then processes the server's response and shows it within the page.
+### 🌟 The browser requests information from a web server using AJAX. It then processes the server's response and shows it within the page.
 
 [![](http://cd.sseu.re/20170208-8b1cq.png)](http://cd.sseu.re/20170208-8b1cq.png)
 
 **1) Request.** The browser requests information/data from the server.
 
-**2) On the Server.** When there is an Ajax request, the server might send back HTML, or it might send data in a different format such as JSON (in the case of YQL) or XML (which the browser turns into HTML).
+**2) On the Server.** When there is an AJAX request, the server might send back HTML, or it might send data in a different format such as JSON (in the case of YQL) or XML (which the browser turns into HTML).
 
 **3) Response.** The browser processes the content and adds it to the page. When the server has finished responding to the request, the browser will fire an event that is used to trigger a JavaScript function that will process the data and incorporate it into the page.
-
-
-
-
 
 ## Building up the path to make the request
 
@@ -22,7 +18,7 @@ In the previous exercise, you visited the different endpoints corresponding to e
 https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20feed%20WHERE%20url%3D%27http%3A%2F%2Ffeeds.nos.nl%2Fnosjournaal%27%20LIMIT%205&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
 ```
 
-Now it's time to build up that URL address for each of the sites in your `rss.js` file. For the sake of readability, you will be building up that YQL query in different steps, making sure that you "url encode" the query to replace any special characters.
+Now it's time to build up that URL address for each of the sites in your `rss.js` file. For the sake of readability, you will be building up that YQL query in different steps, making sure that you "URI encode" the `queryString` to replace any special characters. An URI is just like an URL, also known as a web address or an endpoint.
 
 Let's look at an example of how to do that for the case of NOS:
 
@@ -38,13 +34,9 @@ var format = "&format=json";
 var rssFeedPath = baseUrl.concat(queryString, format);
 ```
 
-
-
-
-
 ## ✏️ Exercise
 
-> Apply everything you know of YQL and Ajax and print out the endpoint for each of the sites that you are following where you used to print out the RSS feed URL.
+> Apply everything you know of YQL and AJAX and print out the endpoint for one site that you are following where you used to print out the RSS feed URL. If you succeed, add it for all the URLS.
 >
 > The result should look like something similar to this:
 >
