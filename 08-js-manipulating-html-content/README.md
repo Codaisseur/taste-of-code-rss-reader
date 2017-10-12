@@ -23,13 +23,9 @@ To include jQuery in your project, you can use the same `<script>` tag that you 
 
 📍 **Important.** Notice that this `<script>` tag was included just before the `</body` closing tag.
 
-
-
-
-
 ## Manipulating HTML content
 
-You are going to manipulate the content of your HTML page using JavaScript. To do that, let's first add an extra script to the `index.html` page, this time located just before the closing `</body>` tag, like so:
+You are going to manipulate the content of your HTML page using JavaScript. To do that, let's first add an extra script to the `index.html` page, this time located just before the closing `</body>` tag, but **after** the loading of the jQuery library. Like so:
 
 ```html
 <!-- index.html -->
@@ -104,7 +100,7 @@ If you refresh the page, you should see the following output:
 
 > 1. Create a new file `rss.js` under the `toc-rss-reader` folder in Atom.
 >
-> 2. Visit the site [NEDERLANDSE RSS FEEDS](http://www.nationalemediasite.nl/rss-feeds.php) and select 4 news sites that you want to follow. Find out each of the feed URLs for those sites.
+> 2. Visit the site [Nederlandse rss feeds](http://www.nationalemediasite.nl/rss-feeds.php) or [rss feeds startpagina](http://rss-feeds.startpagina.nl/) and select 4 rss feeds that you want to follow. Find out each of the feed URLs for those sites.
 >
 > 3. Back in your editor, store each of feed URLS in a variable under the `rss.js` file.
 >
@@ -121,6 +117,6 @@ If you refresh the page, you should see the following output:
 > + Helping students to properly include jQuery in their `index.html` file.
 > + Guiding students to understand how to write an object to list the feeds sites.
 > + Answering questions about how to write the HTML and JavaScript code to render the desired output
-> + Helping students to find out some feed URLs in the NEDERLANDSE RSS FEEDS site and storing them in different variables.
+> + Helping students to find out some feed urls storing them in their respective variables.
 >
 > 📍 **Important.** Make sure that students focus on getting it working for one of the sites first, and later on work on the other sites ;-) .

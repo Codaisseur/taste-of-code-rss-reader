@@ -1,12 +1,12 @@
 # AJAX Responses
 
-Finally it's time retrieving the articles title and link
+Finally it's time to retrieve the articles' title and link
 
-In the previous section, when you printed out `response.query.results.item` in the JavaScript console, what you got is an **array** of objects.
+In the previous section, when you printed out `response.query.results.item` in the JavaScript console, what you got is an **array** of objects. And remember: `Array` is just a fancy word, meaning collection.
 
-### 🌟 Arrays are another way that programmers have to store specific data as a collection.
+### 🌟 Arrays are another way that programmers use to store and access data as if it was a collection.
 
-[![](http://cd.sseu.re/06-ajax-04.png)](http://cd.sseu.re/06-ajax-04.png)
+[![](http://cd.sseu.re/06-AJAX-04.png)](http://cd.sseu.re/06-AJAX-04.png)
 
 In this case, what you got was a collection of the last 5 articles for each of the sites. You can access the data for each of those articles (or `feedItems`) as follows:
 
@@ -25,39 +25,31 @@ title2 = feedItems[1].title
 link3 = feedItems[2].link
 title3 = feedItems[2].title
 
-// ...
+// Fourth item data
+link4 = feedItems[3].link
+title4 = feedItems[3].title
+
+// Et cetera
 ```
 
-### 🌟 `[0]` `[1]` `[2]` are called `index` and they represent the element position within the array.
-
-
-
-
+### 🌟 `[0]` `[1]` `[2]` are called the `index`, and they represent the element position within the array. For some silly reason, programmers start counting at 0...
 
 ## ✏️ Exercise
 
-> Go ahead and print out each of the articles links and titles in the console. The result should look like something similar to this:
+> Go ahead and print out each of the articles links and titles in the console.
 >
-> [![](http://cd.sseu.re/06-ajax-05.png)](http://cd.sseu.re/06-ajax-05.png)
->
-> #### 💣 Hint
+> #### 💣 Hint (Spoiler alert)
 >
 > This is how the code would look like for the NOS case:
 >
 > ```javascript
 > var nosUrl = "http://feeds.nos.nl/nosjournaal"
 >
-> var feedsLibrary = {
->   nos: nosUrl,
-> }
->
 > // Base query string variables
->
 > var baseUrl = "http://query.yahooapis.com/v1/public/yql?q="
 > var format = "&format=json"
 >
 > // NOS
->
 > var nosList = $('#nos')
 > var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5")
 > var rssFeedPath = baseUrl.concat(queryString, format)
@@ -89,8 +81,6 @@ title3 = feedItems[2].title
 > })
 > ```
 
-
-
 ## ✏️ Exercise
 
 > It's time to render a list item including a link to each of the articles under each site. You can make it so that every link opens in a new tab in your browser. Give it a try! The result should look like something similar to this:
@@ -104,17 +94,11 @@ title3 = feedItems[2].title
 > ```javascript
 > var nosUrl = "http://feeds.nos.nl/nosjournaal"
 >
-> var feedsLibrary = {
->   nos: nosUrl,
-> }
->
 > // Base query string variables
->
 > var baseUrl = "http://query.yahooapis.com/v1/public/yql?q="
 > var format = "&format=json"
 >
 > // NOS
->
 > var nosList = $('#nos')
 > var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5")
 > var rssFeedPath = baseUrl.concat(queryString, format)
@@ -135,11 +119,12 @@ title3 = feedItems[2].title
 
 > ### You love making things look beautiful?
 >
-> When you are done with it, go ahead, be creative and make every last change in your web page that you wish to make it look super awesome!
-
-> ### You don't like repetition?
+> When you are done with it, go ahead, be creative and make every last change in your web page that you wish to make, so it looks super awesome!
 >
-> You might be thinking that repeating the same action over each of the items in the `feedItems` collection and writing so much code doesn't really make sense... And you are totally right! Programmers normally loop through elements when doing the same thing over a collection. In order to do so, jQuery has the `.each()` method, and you can use it like this:
+> ### You don't like repetition and or spaghetti code?
+>
+> You might be thinking that repeating the same action over and over for each RSS feed URL, and writing so much code doesn't really make sense... You'd be totally right!
+> Programmers normally loop through elements when doing the same thing over a collection. In order to do so, jQuery has the `.each()` method, and you can use it like this:
 >
 > ```javascript
 > $.each(itemsCollection, function(index) {
@@ -148,6 +133,22 @@ title3 = feedItems[2].title
 >   // Do something with the item
 > });
 > ```
+> For this to work, you could store all RSS feeds in an object like this:
+> ```javascript
+> var feedsLibrary = {
+>   nos: "http://feeds.nos.nl/nosjournaal",
+>   telegraaf: "http://www.telegraaf.nl/rss/",
+>   volkskrant: "http://www.volkskrant.nl/nieuws/rss.xml",
+>   nrc: "http://www.nrc.nl/rss/",
+> }
+> ```
+> Next, you loop over this feedsLibrary object like this:
+> ```javascript
+> $.each(feedsLibrary, function(feedName, feedUrl) {
+>   // Do something useful with the feedName and the feedUrl
+> }
+> ```
+> This will minimize the lines of code, but the resulting program will be rather abstract.
 
 ## 🎩 Only for Coaches
 

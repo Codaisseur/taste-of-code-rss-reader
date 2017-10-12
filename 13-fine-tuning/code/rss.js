@@ -5,7 +5,7 @@ var feedsLibrary = {
   nrc: "http://www.nrc.nl/rss/",
 }
 
-$.each(feedsLibrary, function(feedId, feedUrl) {
+$.each(feedsLibrary, function(feedName, feedUrl) {
   var baseUrl = "http://query.yahooapis.com/v1/public/yql?q="
   var queryString = encodeURI("SELECT * FROM feed WHERE url='" + feedUrl + "' LIMIT 5")
   var format = "&format=json"
@@ -18,7 +18,7 @@ $.each(feedsLibrary, function(feedId, feedUrl) {
     $.each(feedItems, function( index ) {
       var item = feedItems[index]
 
-      var ulElement = $('#' + feedId)
+      var ulElement = $('#' + feedName)
       ulElement.append('<li class="feed-item"><a class="feed-link" target="_blank" href="' + item.link + '">' + item.title +'</a></li>')
     })
   })
