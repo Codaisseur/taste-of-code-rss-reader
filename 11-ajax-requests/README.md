@@ -6,7 +6,7 @@ Doing an AJAX request involves two different steps:
 1. making a request
 2. handling the response
 
-You are making a **request** any time that you visit one of the endpoints of one of your news sites. The response is the data that comes back to you as an answer to your request.
+You are making a **request** every time you visit one of the endpoints of one of your news sites. The response is the data that comes back to you as an answer to your request.
 
 ### 🌟 Data comes in different flavors, and one of them is `JSON`.
 

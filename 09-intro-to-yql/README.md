@@ -29,10 +29,10 @@ You have your feeds in your `rss.js` file:
 ```javascript
 // rss.js
 
-nosUrl = "http://feeds.nos.nl/nosjournaal"
-telegraafUrl = "http://www.telegraaf.nl/rss/"
-volkskrantUrl = "http://www.volkskrant.nl/nieuws/rss.xml"
-nrcUrl = "http://www.nrc.nl/rss/"
+var nosUrl = "http://feeds.nos.nl/nosjournaal"
+var telegraafUrl = "http://www.telegraaf.nl/rss/"
+var volkskrantUrl = "http://www.volkskrant.nl/nieuws/rss.xml"
+var nrcUrl = "http://www.nrc.nl/rss/"
 ```
 
 You will be using those up next. But first, it's time to practice!

@@ -2,11 +2,11 @@
 
 Finally it's time to retrieve the articles' title and link
 
-In the previous section, when you printed out `response.query.results.item` in the JavaScript console, what you got is an **array** of objects. And remember: `Array` is just a fancy word, meaning collection.
+In the previous section, when you printed out `response.query.results.item` in the JavaScript console, what you got was an **array** of objects. And remember: `Array` is just a fancy word, meaning collection.
 
 ### 🌟 Arrays are another way that programmers use to store and access data as if it was a collection.
 
-[![](http://cd.sseu.re/06-AJAX-04.png)](http://cd.sseu.re/06-AJAX-04.png)
+[![](http://cd.sseu.re/06-ajax-04.png)](http://cd.sseu.re/06-ajax-04.png)
 
 In this case, what you got was a collection of the last 5 articles for each of the sites. You can access the data for each of those articles (or `feedItems`) as follows:
 
@@ -36,7 +36,9 @@ title4 = feedItems[3].title
 
 ## ✏️ Exercise
 
-> Go ahead and print out each of the articles links and titles in the console.
+> Go ahead and print out each of the articles links and titles in the console. The result should look like something similar to this:
+>
+> [![](http://cd.sseu.re/06-ajax-05.png)](http://cd.sseu.re/06-ajax-05.png)
 >
 > #### 💣 Hint (Spoiler alert)
 >
@@ -121,7 +123,7 @@ title4 = feedItems[3].title
 >
 > When you are done with it, go ahead, be creative and make every last change in your web page that you wish to make, so it looks super awesome!
 >
-> ### You don't like repetition and or spaghetti code?
+> ### You don't like repetition and/or spaghetti code?
 >
 > You might be thinking that repeating the same action over and over for each RSS feed URL, and writing so much code doesn't really make sense... You'd be totally right!
 > Programmers normally loop through elements when doing the same thing over a collection. In order to do so, jQuery has the `.each()` method, and you can use it like this:
