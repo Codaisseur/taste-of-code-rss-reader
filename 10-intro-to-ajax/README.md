@@ -31,7 +31,7 @@ var baseUrl = "http://query.yahooapis.com/v1/public/yql?q=";
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5");
 var format = "&format=json";
 
-var rssFeedPath = baseUrl.concat(queryString, format);
+var rssFeedPath = baseUrl + queryString + format;
 ```
 
 ## ✏️ Exercise
