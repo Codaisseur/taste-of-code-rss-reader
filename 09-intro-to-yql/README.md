@@ -14,7 +14,7 @@ SELECT * FROM feed WHERE url="http://feeds.nos.nl/nosjournaal" LIMIT 5
 
 Add that query into the **YQL query** field:
 
-[![](http://cd.sseu.re/05-yql-01.png)](http://cd.sseu.re/05-yql-01.png)
+[![](https://cd.sseu.re/YQL_-_Yahoo_Developer_Network_2018-02-16_13-49-17.png)](https://cd.sseu.re/YQL_-_Yahoo_Developer_Network_2018-02-16_13-49-17.png)
 
 **Do you see that ENDPOINT at the bottom of the page?** That's the URL where you need to go to retrieve your feeds (that data is stored somewhere in the world within a web server).
 
