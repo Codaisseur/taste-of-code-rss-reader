@@ -54,7 +54,7 @@ title4 = feedItems[3].title
 > // NOS
 > var nosList = $('#nos')
 > var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5")
-> var rssFeedPath = baseUrl.concat(queryString, format)
+> var rssFeedPath = baseUrl + queryString + format
 >
 > nosList.innerHTML = '<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>'
 >
@@ -103,7 +103,7 @@ title4 = feedItems[3].title
 > // NOS
 > var nosList = $('#nos')
 > var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5")
-> var rssFeedPath = baseUrl.concat(queryString, format)
+> var rssFeedPath = baseUrl + queryString + format
 >
 > $.getJSON(rssFeedPath, function(response) {
 >   var feedItems = response.query.results.item

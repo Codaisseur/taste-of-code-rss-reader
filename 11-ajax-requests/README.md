@@ -48,7 +48,7 @@ Things to note:
 > // NOS
 > var nosList = $('#nos')
 > var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5")
-> var rssFeedPath = baseUrl.concat(queryString, format)
+> var rssFeedPath = baseUrl + queryString + format
 >
 > nosList.append('<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>')
 >

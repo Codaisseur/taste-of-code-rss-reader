@@ -10,7 +10,7 @@ $.each(feedsLibrary, function(feedName, feedUrl) {
   var queryString = encodeURI("SELECT * FROM feed WHERE url='" + feedUrl + "' LIMIT 5")
   var format = "&format=json"
 
-  var rssFeedPath = baseUrl.concat(queryString, format)
+  var rssFeedPath = baseUrl + queryString + format
 
   $.getJSON(rssFeedPath, function(response) {
     var feedItems = response.query.results.item

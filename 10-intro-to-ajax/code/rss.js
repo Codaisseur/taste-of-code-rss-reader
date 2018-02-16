@@ -14,7 +14,7 @@ var format = "&format=json"
 
 var nosList = $('#nos')
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5")
-var rssFeedPath = baseUrl.concat(queryString, format)
+var rssFeedPath = baseUrl + queryString + format
 
 nosList.append('<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>')
 
@@ -22,7 +22,7 @@ nosList.append('<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>')
 
 var telegraafList = $('#telegraaf')
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + telegraafUrl + "' LIMIT 5")
-var rssFeedPath = baseUrl.concat(queryString, format)
+var rssFeedPath = baseUrl + queryString + format
 
 telegraafList.append('<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>')
 
@@ -30,7 +30,7 @@ telegraafList.append('<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>')
 
 var volkskrantList = $('#volkskrant')
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + volkskrantUrl + "' LIMIT 5")
-var rssFeedPath = baseUrl.concat(queryString, format)
+var rssFeedPath = baseUrl + queryString + format
 
 volkskrantList.append('<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>')
 
@@ -38,6 +38,6 @@ volkskrantList.append('<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>')
 
 var nrcList = $('#nrc')
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nrcUrl + "' LIMIT 5")
-var rssFeedPath = baseUrl.concat(queryString, format)
+var rssFeedPath = baseUrl + queryString + format
 
 nrcList.append('<a href="' + rssFeedPath + '">' + rssFeedPath +'</a>')

@@ -14,7 +14,7 @@ var format = "&format=json"
 
 var nosList = $('#nos')
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nosUrl + "' LIMIT 5")
-var rssFeedPath = baseUrl.concat(queryString, format)
+var rssFeedPath = baseUrl + queryString + format
 
 $.getJSON(rssFeedPath, function(response) {
   var feedItems = response.query.results.item
@@ -30,7 +30,7 @@ $.getJSON(rssFeedPath, function(response) {
 
 var telegraafList = $('#telegraaf')
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + telegraafUrl + "' LIMIT 5")
-var rssFeedPath = baseUrl.concat(queryString, format)
+var rssFeedPath = baseUrl + queryString + format
 
 $.getJSON(rssFeedPath, function(response) {
   var feedItems = response.query.results.item
@@ -46,7 +46,7 @@ $.getJSON(rssFeedPath, function(response) {
 
 var volkskrantList = $('#volkskrant')
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + volkskrantUrl + "' LIMIT 5")
-var rssFeedPath = baseUrl.concat(queryString, format)
+var rssFeedPath = baseUrl + queryString + format
 
 $.getJSON(rssFeedPath, function(response) {
   var feedItems = response.query.results.item
@@ -62,7 +62,7 @@ $.getJSON(rssFeedPath, function(response) {
 
 var nrcList = $('#nrc')
 var queryString = encodeURI("SELECT * FROM feed WHERE url='" + nrcUrl + "' LIMIT 5")
-var rssFeedPath = baseUrl.concat(queryString, format)
+var rssFeedPath = baseUrl + queryString + format
 
 $.getJSON(rssFeedPath, function(response) {
   var feedItems = response.query.results.item
