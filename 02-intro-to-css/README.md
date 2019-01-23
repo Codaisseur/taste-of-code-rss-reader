@@ -58,7 +58,7 @@ Now it's time for you to practice!
 
 > Change the `background-color` of your HTML page to `green`, like so:
 >
-> [![](http://cd.sseu.re/20170208-jysjc.png)](http://cd.sseu.re/20170208-jysjc.png)
+> [![](https://cd.sseu.re/Taste_of_Code_2019-01-23_17-19-30.png)
 
 
 
